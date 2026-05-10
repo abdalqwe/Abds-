@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEWAIL HUB</title>
+    <style>
+        /* إعدادات الخلفية العامة */
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        /* اللوجو */
+
+        .logo-container {
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            /* جعل اللوجو دائري ليناسب التصاميم القوية */
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
+            border: 3px solid #00e5ff;
+        }
+
+        /* عنوان الواجهة */
+
+        h1 {
+            font-size: 22px;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #00e5ff;
+            text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+        }
+
+        /* حاوية الأزرار */
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 85%;
+            max-width: 380px;
+            z-index: 10;
+        }
+
+        /* تصميم الأزرار */
+
+        .custom-btn {
+            position: relative;
+            padding: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            font-size: 17px;
+            font-weight: bold;
+            background: rgba(0, 229, 255, 0.05);
+            border: 2px solid #00e5ff;
+            border-radius: 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .custom-btn:hover {
+            background: #00e5ff;
+            color: #000;
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+            transform: scale(1.03);
+        }
+
+        /* تأثيرات الإضاءة الخلفية */
+
+        .bg-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 229, 255, 0.15) 0%, transparent 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* تحريك العناصر */
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .button-group {
+            animation: fadeInUp 1s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="logo-container">
+        <img src="1000676243.jpg" alt="عبودي _التوب" class="logo">
+    </div>
+
+    <h1>عبودي _التوب</h1>
+
+    <div class="button-group">
+        <a href="http://aboudi444.ct.ws" class="custom-btn" target="_blank">
+            🗺️ تغيير صورة الخريطة
+        </a>
+
+    <div class="button-group">
+        <a href="https://aboudi444.vercel.app" class="custom-btn" target="_blank">
+            ♻️ تغير اعدادات 
+        </a>
+
+        <a href="https://abouid444.netlify.app" class="custom-btn" target="_blank">
+            🕺 أكواد الأيقونات والرقصات
+        </a>
+    </div>
+
+    <p style="margin-top: 40px; font-size: 11px; color: #444; letter-spacing: 1px;">ZEWAIL FF • CRAFTLAND EXPERT</p>
+
+</body>
+
+</html>
