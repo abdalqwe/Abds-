@@ -4,157 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aboudi_TOP</title>
+    <title>Aboudi_TOP | عبودي التوب</title>
+    <!-- أيقونات التواصل الاجتماعي -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* إعدادات الخلفية العامة */
+        :root {
+            --primary-color: #00e5ff; /* لون الحواف والأزرار */
+            --bg-color: #0a0a0a;
+            --box-bg: rgba(20, 20, 20, 0.8);
+        }
 
         body {
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
+            background: #000;
+            background-image: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
             color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow: hidden;
         }
 
-        /* اللوجو */
-
-        .logo-container {
-            margin-bottom: 20px;
-            animation: fadeInDown 1s ease-out;
+        /* الصندوق الرئيسي */
+        .main-box {
+            background: var(--box-bg);
+            border: 2px solid var(--primary-color); /* لون الحواف */
+            border-radius: 25px;
+            padding: 40px 20px;
+            width: 90%;
+            max-width: 420px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            animation: fadeIn 0.8s ease-in-out;
         }
 
+        /* اللوجو داخل الصندوق */
         .logo {
-            width: 200px;
-            height: auto;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            /* جعل اللوجو دائري ليناسب التصاميم القوية */
-            box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
-            border: 3px solid #00e5ff;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
         }
-
-        /* عنوان الواجهة */
 
         h1 {
-            font-size: 22px;
-            margin-bottom: 35px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #00e5ff;
-            text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
         }
 
-        /* حاوية الأزرار */
-
-        .button-group {
+        /* قائمة الأزرار */
+        .button-list {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            width: 85%;
-            max-width: 380px;
-            z-index: 10;
+            margin-bottom: 30px; /* مسافة قبل السوشيال ميديا */
         }
 
-        /* تصميم الأزرار */
-
-        .custom-btn {
-            position: relative;
-            padding: 16px;
-            text-align: center;
+        .btn {
             text-decoration: none;
-            color: #fff;
-            font-size: 17px;
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            padding: 15px;
+            border-radius: 12px;
             font-weight: bold;
-            background: rgba(0, 229, 255, 0.05);
-            border: 2px solid #00e5ff;
-            border-radius: 10px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            gap: 10px;
+            transition: 0.3s ease;
         }
 
-        .custom-btn:hover {
-            background: #00e5ff;
+        .btn:hover {
+            background: var(--primary-color);
             color: #000;
-            box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
-            transform: scale(1.03);
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
         }
 
-        /* تأثيرات الإضاءة الخلفية */
-
-        .bg-glow {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(0, 229, 255, 0.15) 0%, transparent 70%);
-            z-index: 1;
-            pointer-events: none;
+        /* قسم السوشيال ميديا تحت الأزرار بضبط */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1); /* خط بسيط فاصل */
         }
 
-        /* تحريك العناصر */
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .social-media a {
+            color: white;
+            font-size: 24px;
+            transition: 0.3s;
+            opacity: 0.8;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .social-media a:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+            color: var(--primary-color);
         }
 
-        .button-group {
-            animation: fadeInUp 1s ease-out;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 10px;
+            color: #555;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="bg-glow"></div>
+    <div class="main-box">
+        <!-- اللوجو -->
+        <img src="1000676243.jpg" alt="عبودي التوب" class="logo">
+        
+        <h1>عبودي التوب</h1>
 
-    <div class="logo-container">
-        <img src="1000676243.jpg" alt="عبودي _التوب" class="logo">
+        <!-- الأزرار -->
+        <div class="button-list">
+            <a href="http://aboudi444.ct.ws" class="btn" target="_blank">
+                <i class="fas fa-map"></i> تغيير صورة الخريطة
+            </a>
+
+            <a href="https://aboudi444.vercel.app" class="btn" target="_blank">
+                <i class="fas fa-cog"></i> تغيير الإعدادات
+            </a>
+
+            <a href="https://abouid444.netlify.app" class="btn" target="_blank">
+                <i class="fas fa-star"></i> أكواد الأيقونات والرقصات
+            </a>
+        </div>
+
+        <!-- السوشيال ميديا تحت الأزرار مباشرة -->
+        <div class="social-media">
+            <a href="https://youtube.com/@عبودي_التوب" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://tiktok.com/@Aboudi_4_4_4_ff" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://t.me/c1me_91" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+
+        <footer>Aboudi FF • CRAFTLAND EXPERT</footer>
     </div>
-
-    <h1>عبودي _التوب</h1>
-
-    <div class="button-group">
-        <a href="http://aboudi444.ct.ws" class="custom-btn" target="_blank">
-            🗺️ تغيير صورة الخريطة
-        </a>
-
-    <div class="button-group">
-        <a href="https://aboudi444.vercel.app" class="custom-btn" target="_blank">
-            ♻️ تغير اعدادات 
-        </a>
-
-        <a href="https://abouid444.netlify.app" class="custom-btn" target="_blank">
-            🕺 أكواد الأيقونات والرقصات
-        </a>
-    </div>
-
-    <p style="margin-top: 40px; font-size: 11px; color: #444; letter-spacing: 1px;">Aboudi FF • CRAFTLAND EXPERT</p>
 
 </body>
 
